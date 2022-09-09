@@ -56,7 +56,9 @@ function App() {
         <Button handleClick={() => showToast('info')}>Info</Button>
         <Button handleClick={() => showToast('warning')}>Warning</Button>
       </div>
-      <Toast toastlist={list} position="buttom-right" setList={setList} />
+      {list.length > 0 && (
+        <Toast toastlist={list} position="bottom-right" setList={setList} />
+      )}
     </div>
   );
 }
